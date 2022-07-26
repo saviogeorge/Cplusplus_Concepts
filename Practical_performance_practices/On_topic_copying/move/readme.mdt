@@ -1,0 +1,4 @@
+The code is more performant becuase
+the string s has a lifetime and it must be created 
+on the stack and then it must be destroyed. even after its
+moved, its destructor needs to be called and so on.

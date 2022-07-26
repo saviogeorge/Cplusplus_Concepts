@@ -1,0 +1,15 @@
+Problem:
+1) The reference counter for the shared pointer is incremented
+as the ptr is passed by value.
+which is fixed when its made to recieve it as const reference.
+
+2) However the second problem is the shared pointer passed is of type derived
+ and its received as base- which means it has to create a temporary of shared 
+ pointer type base calling a conversion constructor of shared pointer of derived
+
+3) Do not pass shared pointers in general
+
+
+Note:
+There are a few bugs in the final solution please re hear the video and understand it
+
