@@ -1,0 +1,7 @@
+1) A row major traversal is much faster compared to 
+column major
+
+
+2) An array or vector are better performant when compared to other
+containers simply because they are contigous allocations and thus
+allows it to be cached and and therefore performant

@@ -1,0 +1,19 @@
+Here we are doing some actual work 
+and when this benchmarked you actually do not see a lot of 
+performance difference for the initial kilo bytes.
+But once it is beyond a limit (large array sizes) we observe a performce difference.
+
+Why?
+Because as per the plot the first half is bound by computation
+- which means how fast the CPU can handle the computations
+but for the second half the computation does not make a real 
+difference because the CPU is actully then waiting for the 
+data to be fetched (from cache or main memory or whereever).
+
+
+Generally when you want improve the performance of an implementation
+we profile the code inorder to find the time consuming parts of the code
+however it does not often show you the delay can also be caused by the 
+unavailabilty of the data (profilers generally does not show we are waiting for data)
+for the cpu to process. Unaware of this fact we try
+optimizing the code for computation and this will not yield satisfactory results.
